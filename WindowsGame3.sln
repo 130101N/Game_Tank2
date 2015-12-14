@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsGame3", "WindowsGame3\WindowsGame3\WindowsGame3.csproj", "{E15DB932-0AE8-42D2-AA6B-AE0FB822F2EA}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "WindowsGame3Content", "WindowsGame3\WindowsGame3Content\WindowsGame3Content.contentproj", "{4E7C8991-6D91-4266-BAFC-C579CC1FE79A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E15DB932-0AE8-42D2-AA6B-AE0FB822F2EA}.Debug|x86.ActiveCfg = Debug|x86
+		{E15DB932-0AE8-42D2-AA6B-AE0FB822F2EA}.Debug|x86.Build.0 = Debug|x86
+		{E15DB932-0AE8-42D2-AA6B-AE0FB822F2EA}.Release|x86.ActiveCfg = Release|x86
+		{E15DB932-0AE8-42D2-AA6B-AE0FB822F2EA}.Release|x86.Build.0 = Release|x86
+		{4E7C8991-6D91-4266-BAFC-C579CC1FE79A}.Debug|x86.ActiveCfg = Debug|x86
+		{4E7C8991-6D91-4266-BAFC-C579CC1FE79A}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
