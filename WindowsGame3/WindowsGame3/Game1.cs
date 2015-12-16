@@ -18,11 +18,7 @@ namespace WindowsGame3
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        TileMap myMap = new TileMap();
-        int squaresAcross = 10;
-        int squaresDown = 10;
-        Texture2D background=null;
-
+        Map map;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -38,17 +34,8 @@ namespace WindowsGame3
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            map = new Map();
             base.Initialize();
-
-            graphics.PreferredBackBufferWidth = 500;
-            graphics.PreferredBackBufferHeight = 500;
-
-            Tile.TileSetTexture = Content.Load<Texture2D>(@"Texture\map");
-
-            graphics.IsFullScreen = false;
-            graphics.ApplyChanges();
-            Window.Title = "Tank Game";
         }
 
         /// <summary>
@@ -59,7 +46,21 @@ namespace WindowsGame3
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            Tile.Content = Content;
 
+            map.Genarate(new int[,]{
+                {4,4,4,2,4,2,4,3,4,1},
+                {3,4,4,4,4,4,4,2,4,4},
+                {4,3,4,4,4,2,4,4,4,2},
+                {1,4,4,4,3,4,4,4,4,4},
+                {4,4,4,2,4,1,4,4,4,4},
+                {3,1,2,4,4,2,4,2,3,4},
+                {4,4,3,2,1,4,4,1,4,4},
+                {2,4,4,4,4,4,4,3,2,4},
+                //{4,3,4,4,4,2,4,4,4,2},
+                //{4,4,4,2,4,1,4,4,4,4},
+
+            }, 50);
             // TODO: use this.Content to load your game content here
         }
 
@@ -94,35 +95,12 @@ namespace WindowsGame3
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.SlateGray);
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-
-            Vector2 firstSquare = new Vector2(Camera.Location.X / 50, Camera.Location.Y / 50);
-            int firstX = (int)firstSquare.X;
-            int firstY = (int)firstSquare.Y;
-
-            Vector2 squareOffset = new Vector2(Camera.Location.X % 50, Camera.Location.Y % 50);
-            int offsetX = (int)squareOffset.X;
-            int offsetY = (int)squareOffset.Y;
-
-            for (int y = 0; y < squaresDown; y++)
-            {
-                for (int x = 0; x < squaresAcross; x++)
-                {
-                    spriteBatch.Draw(
-                        Tile.TileSetTexture,
-                        new Rectangle((x * 50) - offsetX, (y * 50) - offsetY, 50, 50),
-                        Tile.GetSourceRectangle(myMap.Rows[y + firstY].Columns[x + firstX].TileID),
-                        Color.White);
-                }
-            }
-
-
-
+            map.Draw(spriteBatch);
             spriteBatch.End();
-
             base.Draw(gameTime);
         }
     }

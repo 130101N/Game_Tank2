@@ -10,6 +10,60 @@
       <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Texture\map.xnb</Output>
       <Time>2015-12-14T11:09:17.3996688+05:30</Time>
     </Item>
+    <Item>
+      <Source>Texture\TankRush.png</Source>
+      <Name>Texture\TankRush</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Texture\TankRush.xnb</Output>
+      <Time>2015-12-14T15:56:00.8182647+05:30</Time>
+    </Item>
+    <Item>
+      <Source>Texture\images (1).jpg</Source>
+      <Name>Texture\images (1)</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Texture\images (1).xnb</Output>
+      <Time>2015-12-14T16:00:34.3354105+05:30</Time>
+    </Item>
+    <Item>
+      <Source>Tile1.jpg</Source>
+      <Name>Tile1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile1.xnb</Output>
+      <Time>2015-12-16T15:29:50.9233517+05:30</Time>
+    </Item>
+    <Item>
+      <Source>tile2.jpg</Source>
+      <Name>tile2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\tile2.xnb</Output>
+      <Time>2015-12-16T15:29:50.9233517+05:30</Time>
+    </Item>
+    <Item>
+      <Source>Tile3.jpg</Source>
+      <Name>Tile3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile3.xnb</Output>
+      <Time>2015-12-16T15:29:50.9389778+05:30</Time>
+    </Item>
+    <Item>
+      <Source>Tile4.jpg</Source>
+      <Name>Tile4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile4.xnb</Output>
+      <Time>2015-12-16T15:29:50.8452219+05:30</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{4E7C8991-6D91-4266-BAFC-C579CC1FE79A}</ContentProjectGUID>
