@@ -2,15 +2,6 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>Texture\map.png</Source>
-      <Name>Texture\map</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Texture\map.xnb</Output>
-      <Time>2015-12-14T11:09:17.3996688+05:30</Time>
-    </Item>
-    <Item>
       <Source>Texture\TankRush.png</Source>
       <Name>Texture\TankRush</Name>
       <Importer>TextureImporter</Importer>
@@ -18,15 +9,6 @@
       <Options>None</Options>
       <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Texture\TankRush.xnb</Output>
       <Time>2015-12-14T15:56:00.8182647+05:30</Time>
-    </Item>
-    <Item>
-      <Source>Texture\images (1).jpg</Source>
-      <Name>Texture\images (1)</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Texture\images (1).xnb</Output>
-      <Time>2015-12-14T16:00:34.3354105+05:30</Time>
     </Item>
     <Item>
       <Source>Tile1.jpg</Source>
@@ -63,6 +45,15 @@
       <Options>None</Options>
       <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile4.xnb</Output>
       <Time>2015-12-16T15:29:50.8452219+05:30</Time>
+    </Item>
+    <Item>
+      <Source>TankRush.png</Source>
+      <Name>TankRush</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\TankRush.xnb</Output>
+      <Time>2015-12-16T16:33:20.0231237+05:30</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

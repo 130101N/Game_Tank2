@@ -19,6 +19,8 @@ namespace WindowsGame3
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Map map;
+        Texture2D texture;
+        //Rectangle rectangle;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -34,8 +36,14 @@ namespace WindowsGame3
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            graphics.PreferredBackBufferWidth =820;
+            graphics.PreferredBackBufferHeight = 620;
             map = new Map();
             base.Initialize();
+
+            graphics.IsFullScreen = false;
+            graphics.ApplyChanges();
+            Window.Title = "Tank Game";
         }
 
         /// <summary>
@@ -47,7 +55,7 @@ namespace WindowsGame3
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             Tile.Content = Content;
-
+            //rectangle = new Rectangle( 1,1,texture.Width,texture.Height);
             map.Genarate(new int[,]{
                 {4,4,4,2,4,2,4,3,4,1},
                 {3,4,4,4,4,4,4,2,4,4},
@@ -57,10 +65,12 @@ namespace WindowsGame3
                 {3,1,2,4,4,2,4,2,3,4},
                 {4,4,3,2,1,4,4,1,4,4},
                 {2,4,4,4,4,4,4,3,2,4},
-                //{4,3,4,4,4,2,4,4,4,2},
-                //{4,4,4,2,4,1,4,4,4,4},
+                {4,3,4,4,4,2,4,4,4,2},
+                {4,4,4,2,4,1,4,4,4,4},
 
             }, 50);
+
+            texture = Content.Load<Texture2D>("TankRush");
             // TODO: use this.Content to load your game content here
         }
 
@@ -100,6 +110,7 @@ namespace WindowsGame3
             // TODO: Add your drawing code here
             spriteBatch.Begin();
             map.Draw(spriteBatch);
+            //spriteBatch.Draw(texture, rectangle, Color.White);
             spriteBatch.End();
             base.Draw(gameTime);
         }
