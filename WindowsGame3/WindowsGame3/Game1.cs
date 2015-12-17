@@ -21,6 +21,7 @@ namespace WindowsGame3
         Map map;
         Texture2D texture;
         //Rectangle rectangle;
+        Texture2D tank;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -36,7 +37,7 @@ namespace WindowsGame3
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            graphics.PreferredBackBufferWidth =820;
+            graphics.PreferredBackBufferWidth = 820;
             graphics.PreferredBackBufferHeight = 620;
             map = new Map();
             base.Initialize();
@@ -71,6 +72,7 @@ namespace WindowsGame3
             }, 50);
 
             texture = Content.Load<Texture2D>("TankRush");
+
             // TODO: use this.Content to load your game content here
         }
 
@@ -110,9 +112,151 @@ namespace WindowsGame3
             // TODO: Add your drawing code here
             spriteBatch.Begin();
             map.Draw(spriteBatch);
-            //spriteBatch.Draw(texture, rectangle, Color.White);
+            spriteBatch.Draw(texture, new Rectangle(50, 50, 50, 50), new Rectangle(0, 0, 50, 50), Color.White);
+            Move m = new Move();
+            m.PlayerMovement();
             spriteBatch.End();
             base.Draw(gameTime);
         }
+
+
+        /*
+        private List<Vector2> FindPath_(Node start, Vector2 end)
+        {
+            if (start.X == end.X && start.Y == end.Y)
+            {
+                List<Vector2> final = mClosed.Select(node => node.Position).ToList();
+                return final;
+            }
+
+            int xLeft = start.X - 1;
+            int xRight = start.X + 1;
+            int yUp = start.Y - 1;
+            int yDown = start.Y + 1;
+
+
+            Tile left = GetNearestTile_(xLeft, start.Y);
+            Tile right = GetNearestTile_(xRight, start.Y);
+            Tile up = GetNearestTile_(start.X, yUp);
+            Tile down = GetNearestTile_(start.X, yDown);
+
+            List<Node> adjacentNodes = new List<Node>();
+
+            Node lNode = null;
+            Node rNode = null;
+            Node uNode = null;
+            Node dNode = null;
+
+            if (up != null)
+            {
+                uNode = new Node(new Vector2(start.X, yUp), start.CostFromA + 1, Math.Abs((int)end.X - start.X) + Math.Abs((int)end.Y - (start.Y - 1)), start);
+                adjacentNodes.Add(uNode);
+            }
+            if (left != null)
+            {
+                lNode = new Node(new Vector2(xLeft, start.Y), start.CostFromA + 1, Math.Abs((int)end.X - (start.X - 1)) + Math.Abs((int)end.Y - start.Y), start);
+                adjacentNodes.Add(lNode);
+            }
+            if (down != null)
+            {
+                dNode = new Node(new Vector2(start.X, yDown), start.CostFromA + 1, Math.Abs((int)end.X - start.X) + Math.Abs((int)end.Y - (start.Y + 1)), start);
+                adjacentNodes.Add(dNode);
+            }
+            if (right != null)
+            {
+                rNode = new Node(new Vector2(xRight, start.Y), start.CostFromA + 1, Math.Abs((int)end.X - (start.X + 1)) + Math.Abs((int)end.Y - start.Y), start);
+                adjacentNodes.Add(rNode);
+            }
+
+
+
+            foreach (Node node in adjacentNodes)
+            {
+                if (ClosedListContainsTile_(node))
+                {
+                    continue;
+                }
+                else if (!OpenListContainsTile_(node))
+                {
+                    InsertNode(node);
+                }
+                else if (OpenListContainsTile_(node))
+                {
+                    if (node.Parent != null && node.CostFromA + 1 < node.Parent.CostFromA)
+                    {
+                        node.Parent.CostFromA = node.CostFromA + 1;
+                        Node parentNode = mOpen.FirstOrDefault(n => n.X == node.Parent.X && n.Y == node.Parent.Y);
+                        int index = mOpen.IndexOf(parentNode);
+                        mOpen.RemoveAt(index);
+                        InsertNode(parentNode);
+                    }
+                }
+            }
+
+            if (mOpen.Count == 0)
+                return new List<Vector2>();
+
+            int cost = int.MaxValue;
+
+            Node closest = mOpen[0];
+
+
+            mOpen.Remove(closest);
+            mClosed.Add(closest);
+
+
+            return FindPath_(closest, end);
+
+        }
+
+        private Tile GetNearestTile_(int x, int y)
+        {
+            Tile tile;
+            try
+            {
+                tile = Map(x, y);
+                if (tile.Type != TileType.Empty)
+                    return null;
+            }
+            catch
+            {
+                return null;
+            }
+            return tile;
+        }
+
+        private bool OpenListContainsTile_(Node node)
+        {
+            return mOpen.FirstOrDefault(t => t.X == node.X && t.Y == node.Y) != null;
+        }
+
+        private bool ClosedListContainsTile_(Node node)
+        {
+            return mClosed.FirstOrDefault(t => t.X == node.X && t.Y == node.Y) != null;
+        }
+
+        private void InsertNode(Node node)
+        {
+            int i = 0;
+            for (; i < mOpen.Count; i++)
+            {
+                Node n = mOpen.ElementAt(i);
+                if (node.Total <= n.Total)
+                {
+
+                    break;
+                }
+            }
+            if (i < mOpen.Count)
+            {
+                mOpen.Insert(i, node);
+            }
+            else
+            {
+                mOpen.Add(node);
+            }
+        }
+
+    }*/
     }
 }

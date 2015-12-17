@@ -78,6 +78,8 @@
     <Compile Include="Contestant.cs" />
     <Compile Include="LifePack.cs" />
     <Compile Include="Map.cs" />
+    <Compile Include="Move.cs" />
+    <Compile Include="Node.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
