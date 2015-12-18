@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using System.Threading;
 
 namespace WindowsGame3
 {
@@ -22,6 +23,9 @@ namespace WindowsGame3
         Texture2D texture;
         //Rectangle rectangle;
         Texture2D tank;
+        Thread thread;
+        Move m;
+        int[,] arr;
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -45,6 +49,7 @@ namespace WindowsGame3
             graphics.IsFullScreen = false;
             graphics.ApplyChanges();
             Window.Title = "Tank Game";
+            
         }
 
         /// <summary>
@@ -57,6 +62,7 @@ namespace WindowsGame3
             spriteBatch = new SpriteBatch(GraphicsDevice);
             Tile.Content = Content;
             //rectangle = new Rectangle( 1,1,texture.Width,texture.Height);
+            
             map.Genarate(new int[,]{
                 {4,4,4,2,4,2,4,3,4,1},
                 {3,4,4,4,4,4,4,2,4,4},
@@ -72,7 +78,10 @@ namespace WindowsGame3
             }, 50);
 
             texture = Content.Load<Texture2D>("TankRush");
-
+            Player p = new Player();
+            p.LoadContent(this.Content, "name");
+             m=new Move();
+            
             // TODO: use this.Content to load your game content here
         }
 
@@ -112,13 +121,60 @@ namespace WindowsGame3
             // TODO: Add your drawing code here
             spriteBatch.Begin();
             map.Draw(spriteBatch);
+            
             spriteBatch.Draw(texture, new Rectangle(50, 50, 50, 50), new Rectangle(0, 0, 50, 50), Color.White);
-            Move m = new Move();
-            m.PlayerMovement();
+           
+            
+           /* Vector2 position = Vector2.Zero;
+            Player player = new Player(50,50);
+            player.Draw(spriteBatch);
+            /*Vector2 position = Vector2.Zero;
+            Vector2 firstSquare = new Vector2(position.X , position.Y );
+            for (int i = 1; i < 10; i++)
+            {
+                for (int j = 1; j < 10; j++)
+                {
+                    spriteBatch.Draw(texture, new Rectangle((int)(position.X + i)*50, (int)(position.Y + j)*50, 50, 50), new Rectangle(0, 0, 50, 50), Color.White);
+                }
+            }*/
+            /*Thread aThread = new Thread(new ThreadStart(m.moveTo(5,5)));
+            aThread.Start();*/
+
+            arr = new int[,]{
+                {4,4,4,2,4,2,4,3,4,1},
+                {3,4,4,4,4,4,4,2,4,4},
+                {4,3,4,4,4,2,4,4,4,2},
+                {1,4,4,4,3,4,4,4,4,4},
+                {4,4,4,2,4,1,4,4,4,4},
+                {3,1,2,4,4,2,4,2,3,4},
+                {4,4,3,2,1,4,4,1,4,4},
+                {2,4,4,4,4,4,4,3,2,4},
+                {4,3,4,4,4,2,4,4,4,2},
+                {4,4,4,2,4,1,4,4,4,4},
+
+            };
+            Move hero =new Move();
+            Vector2 position = Vector2.Zero;
+            for (int i = 1; i < 10; i++)
+            {
+                for (int j = 1; j <10; j++)
+                {
+                    if(arr[i,j]==4)
+                    spriteBatch.Draw(texture, new Rectangle((int)(position.X+1) * 50, (int)(position.Y+1) * 50, 50, 50), new Rectangle(0, 0, 50, 50), Color.White);
+                }
+            }
+                hero.setPosition(5, 5);
+            hero.moveTo(hero.getX(), hero.getY());
+            
             spriteBatch.End();
             base.Draw(gameTime);
         }
 
+ 
+        public void player_movement()
+        {
+
+        }
 
         /*
         private List<Vector2> FindPath_(Node start, Vector2 end)

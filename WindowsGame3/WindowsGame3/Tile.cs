@@ -31,6 +31,20 @@ namespace WindowsGame3
 
         }
 
+
+        public int PDir { get; set; }
+
+        public int G { get; set; }
+
+        public int H { get; set; }
+
+        public int F { get; set; }
+
+        public int X { get; set; }
+
+        public int Y { get; set; }
+
+        public bool Collision { get; set; }
     }
     class CollisionTiles : Tile
     {
