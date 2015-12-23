@@ -7,35 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Texture\TankRush.xnb</Output>
-      <Time>2015-12-14T15:56:00.8182647+05:30</Time>
-    </Item>
-    <Item>
-      <Source>Tile1.jpg</Source>
-      <Name>Tile1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile1.xnb</Output>
-      <Time>2015-12-16T15:29:50.9233517+05:30</Time>
-    </Item>
-    <Item>
-      <Source>tile2.jpg</Source>
-      <Name>tile2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\tile2.xnb</Output>
-      <Time>2015-12-16T15:29:50.9233517+05:30</Time>
-    </Item>
-    <Item>
-      <Source>Tile3.jpg</Source>
-      <Name>Tile3</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile3.xnb</Output>
-      <Time>2015-12-16T15:29:50.9389778+05:30</Time>
+      <Output>C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Texture\TankRush.xnb</Output>
+      <Time>2015-12-23T09:34:18.5298016-06:00</Time>
     </Item>
     <Item>
       <Source>Tile4.jpg</Source>
@@ -43,8 +16,35 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile4.xnb</Output>
-      <Time>2015-12-16T15:29:50.8452219+05:30</Time>
+      <Output>C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile4.xnb</Output>
+      <Time>2015-12-23T09:34:18.5328018-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Tile1.jpg</Source>
+      <Name>Tile1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile1.xnb</Output>
+      <Time>2015-12-23T09:34:18.5298016-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Tile2.jpg</Source>
+      <Name>Tile2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile2.xnb</Output>
+      <Time>2015-12-23T09:34:18.5308017-06:00</Time>
+    </Item>
+    <Item>
+      <Source>Tile3.jpg</Source>
+      <Name>Tile3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile3.xnb</Output>
+      <Time>2015-12-23T09:34:18.5318013-06:00</Time>
     </Item>
     <Item>
       <Source>TankRush.png</Source>
@@ -52,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\TankRush.xnb</Output>
-      <Time>2015-12-16T16:33:20.0231237+05:30</Time>
+      <Output>C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\TankRush.xnb</Output>
+      <Time>2015-12-23T09:34:18.5278015-06:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -62,39 +62,39 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3Content\</RootDirectory>
-      <LoggerRootDirectory>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\</LoggerRootDirectory>
-      <IntermediateDirectory>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2011-09-01T16:22:30+05:30</Value>
+        <Value>2011-09-01T19:22:30-05:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
-        <Value>2011-09-01T16:22:30+05:30</Value>
+        <Value>2011-09-01T19:22:30-05:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2011-09-01T16:22:30+05:30</Value>
+        <Value>2011-09-01T19:22:30-05:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2011-09-01T16:22:30+05:30</Value>
+        <Value>2011-09-01T19:22:30-05:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2011-09-01T16:22:30+05:30</Value>
+        <Value>2011-09-01T19:22:30-05:00</Value>
       </Assembly>
       <Assembly>
         <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
-        <Value>2011-09-01T16:22:30+05:30</Value>
+        <Value>2011-09-01T19:22:30-05:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2015-11-13T07:16:25.0346156+05:30</Value>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-11-11T20:45:01.148504-06:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
