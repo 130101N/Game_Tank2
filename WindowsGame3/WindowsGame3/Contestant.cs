@@ -15,7 +15,7 @@ namespace WindowsGame3
         private int pointsEarned = 0;
         private int coins = 0;
         private int health = 0;
-        private bool isAlive = true;
+        public bool isAlive { get; set; }
         private bool invalidCell = false;
         private DateTime updatedTime;
 
@@ -57,11 +57,6 @@ namespace WindowsGame3
             set { pointsEarned = value; }
         }
 
-        public bool IsAlive
-        {
-            get { return isAlive; }
-            set { isAlive = value; }
-        }
 
         public bool InvalidCell
         {

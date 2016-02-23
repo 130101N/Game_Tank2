@@ -10,6 +10,7 @@ namespace WindowsGame3
         public int LifePackLocationX { get; set; }
         public int LifePackLocationY { get; set; }
         public int lifetime { get; set; }
+        public bool isAppear { get; set; }
 
         public override string ToString()
         {

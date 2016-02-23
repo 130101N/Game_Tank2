@@ -10,25 +10,97 @@ D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x
 D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile3.xnb
 D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile4.xnb
 D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\TankRush.xnb
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Texture\TankRush.xnb
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile4.xnb
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile1.xnb
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile2.xnb
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile3.xnb
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\TankRush.xnb
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\WindowsGame3.exe
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\WindowsGame3.pdb
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.dll
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.xml
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\obj\x86\Debug\WindowsGame3.csprojResolveAssemblyReference.cache
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\obj\x86\Debug\WindowsGame3.exe
-C:\Users\Thilini\Desktop\Game_Tank2\WindowsGame3\WindowsGame3\obj\x86\Debug\WindowsGame3.pdb
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Texture\TankRush.xnb
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile4.xnb
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile1.xnb
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile2.xnb
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile3.xnb
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\TankRush.xnb
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\WindowsGame3.exe
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\WindowsGame3.pdb
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.dll
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.xml
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\obj\x86\Debug\WindowsGame3.csprojResolveAssemblyReference.cache
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\obj\x86\Debug\WindowsGame3.exe
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\obj\x86\Debug\WindowsGame3.pdb
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Texture\LifePack.xnb
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\LifePack.xnb
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Coin.xnb
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\tank.xnb
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Coin1.xnb
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\tank1.xnb
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\background1.xnb
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\life.xnb
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Texture\TankRush.xnb
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile4.xnb
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile1.xnb
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile2.xnb
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile3.xnb
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\TankRush.xnb
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Texture\LifePack.xnb
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Coin.xnb
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\tank.xnb
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\LifePack.xnb
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Coin1.xnb
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\tank1.xnb
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\background1.xnb
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\life.xnb
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\WindowsGame3.exe
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\WindowsGame3.pdb
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.dll
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.xml
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\obj\x86\Debug\WindowsGame3.csprojResolveAssemblyReference.cache
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\obj\x86\Debug\WindowsGame3.exe
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3\obj\x86\Debug\WindowsGame3.pdb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Texture\TankRush.xnb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile4.xnb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile1.xnb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile2.xnb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile3.xnb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Texture\LifePack.xnb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\background1.xnb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile5dir0.xnb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile5dir1.xnb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile5dir2.xnb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile5dir3.xnb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile6.xnb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\Tile7.xnb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\TTile1.xnb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\TTile2.xnb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\TTile3.xnb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\TTile4.xnb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\WindowsGame3.exe
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\WindowsGame3.pdb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.dll
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.xml
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\obj\x86\Debug\WindowsGame3.csprojResolveAssemblyReference.cache
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\obj\x86\Debug\WindowsGame3.exe
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\obj\x86\Debug\WindowsGame3.pdb
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3\bin\x86\Debug\Content\SpriteFont.xnb

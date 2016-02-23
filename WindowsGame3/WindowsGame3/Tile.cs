@@ -11,6 +11,7 @@ namespace WindowsGame3
     class Tile
     {
         protected Texture2D texture;
+        public SpriteFont font;
         private Rectangle rectangle;
 
         public Rectangle Rectangle
@@ -18,6 +19,14 @@ namespace WindowsGame3
             get { return rectangle; }
             protected set { rectangle = value; }
         }
+        /*
+        public Vector2 Playerpos
+        {
+            get { return playerpos; }
+            protected set { playerpos = value; }
+        }
+
+    */
         private static ContentManager content;
         public static ContentManager Content
         {
@@ -28,30 +37,51 @@ namespace WindowsGame3
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(texture, rectangle, Color.White);
-
+            font = Content.Load<SpriteFont>("SpriteFont");
+            spriteBatch.DrawString(font, "Tank Game", new Vector2(20, 20), Color.White);
         }
 
 
-        public int PDir { get; set; }
-
-        public int G { get; set; }
-
-        public int H { get; set; }
-
-        public int F { get; set; }
-
-        public int X { get; set; }
-
-        public int Y { get; set; }
-
-        public bool Collision { get; set; }
     }
     class CollisionTiles : Tile
     {
         public CollisionTiles(int i, Rectangle newRectangle)
         {
-            texture = Content.Load<Texture2D>("Tile" + i);
+            texture = Content.Load<Texture2D>("TTile" + i);
+
             this.Rectangle = newRectangle;
         }
     }
+
+    class PlayerTiles : Tile
+    {
+        public PlayerTiles(int dir, Rectangle newRectangle)
+        {
+            texture = Content.Load<Texture2D>("Tile5dir" + dir);
+
+            this.Rectangle = newRectangle;
+        }
+    }
+
+    class CoinTiles : Tile
+    {
+        public CoinTiles(Rectangle newRectangle)
+        {
+            texture = Content.Load<Texture2D>("Tile6");
+
+            this.Rectangle = newRectangle;
+        }
+    }
+
+    class LifePackTiles : Tile
+    {
+        public LifePackTiles(Rectangle newRectangle)
+        {
+            texture = Content.Load<Texture2D>("Tile7");
+
+            this.Rectangle = newRectangle;
+        }
+    }
+
+
 }

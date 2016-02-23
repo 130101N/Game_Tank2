@@ -11,6 +11,8 @@ namespace WindowsGame3
         public int CoinPileLocationY { get; set; }
         public int lifetime { get; set; }
         public int price { get; set; }
+        public bool isAppear { get; set; }
+
 
         public override string ToString()
         {
