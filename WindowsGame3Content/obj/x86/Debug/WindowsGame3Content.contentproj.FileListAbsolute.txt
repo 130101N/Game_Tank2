@@ -1,0 +1,5 @@
+D:\Docs\Visual Studio 2013\Projects\WindowsGame3\WindowsGame3\WindowsGame3Content\obj\x86\Debug\WindowsGame3Content.contentprojResolveAssemblyReference.cache
+C:\Users\Thilini\Downloads\WindowsGame3\WindowsGame3\WindowsGame3Content\obj\x86\Debug\WindowsGame3Content.contentprojResolveAssemblyReference.cache
+E:\semester 4\CS 2212 Programming Challenge II\WindowsGame3eval2final\WindowsGame3\WindowsGame3Content\obj\x86\Debug\WindowsGame3Content.contentprojResolveAssemblyReference.cache
+C:\Users\Thilini\Desktop\WindowsGame3eval\WindowsGame3\WindowsGame3Content\obj\x86\Debug\WindowsGame3Content.contentprojResolveAssemblyReference.cache
+C:\Users\Thilini\Desktop\WindowsGame3eval\Game_Tank2\WindowsGame3\WindowsGame3Content\obj\x86\Debug\WindowsGame3Content.contentprojResolveAssemblyReference.cache
