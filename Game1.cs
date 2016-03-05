@@ -26,7 +26,7 @@ namespace WindowsGame3
         Map map;
 
         private bool isConnected;
-        private Contestant contestant = new Contestant();
+        private Contestant[] contestant = new Contestant[5];
         private LifePack lifepack = new LifePack();
         private CoinPile coinpile = new CoinPile();
         int[,] initialLocations = new int[10, 10];
@@ -50,6 +50,10 @@ namespace WindowsGame3
         Texture2D whiteRectangle;
         public SpriteFont font;
 
+        private bool[,] AImap = new bool[10, 10];
+        private SearchParameters searchParameters;
+        int[] coinTime = new int[100];
+        //Dictionary<int, CoinPile> coinpiles = new Dictionary<int, CoinPile>();
 
         //Rectangle rectangle;
         public Game1()
@@ -81,6 +85,7 @@ namespace WindowsGame3
                 for (int j = 0; j < 10; j++)
                 {
                     initialLocations[i, j] = 4;
+                    AImap[i, j] = true;
                 }
             }
 
@@ -149,9 +154,9 @@ namespace WindowsGame3
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
-
-
+            
+            map.disapperLifepacks(gameTime);
+            map.disapperCoins(gameTime);
 
             base.Update(gameTime);
         }
@@ -162,23 +167,23 @@ namespace WindowsGame3
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.SlateGray);
+        GraphicsDevice.Clear(Color.SlateGray);
 
-            spriteBatch.Begin();
+        spriteBatch.Begin();
 
-            spriteBatch.Draw(backgroundTexture, new Vector2(0, 0), Color.White);
-            map.Draw(spriteBatch);
-            font = Content.Load<SpriteFont>("SpriteFont");
+        spriteBatch.Draw(backgroundTexture, new Vector2(0, 0), Color.White);
+        map.Draw(spriteBatch);
+        font = Content.Load<SpriteFont>("SpriteFont");
 
-            spriteBatch.DrawString(font, "Player Details", new Vector2(700, 100), Color.White);
-            drawData();
-            updateData();
+        spriteBatch.DrawString(font, "Player Details", new Vector2(700, 100), Color.White);
+        drawData();
+        updateData();
 
-            /*drawplayer();
-            drawLifepacks();
-            drwaCoins();
+        /*drawplayer();
+        drawLifepacks();
+        drwaCoins();
 
-            */
+        */
             spriteBatch.End();
             base.Draw(gameTime);
         }
@@ -203,16 +208,6 @@ namespace WindowsGame3
             stream.Write(ba, 0, ba.Length);        //send message to server
             stream.Flush();
             stream.Close();          //close network stream
-        }
-
-        public void sendupdates()
-        {
-
-            String s = move();
-            Console.WriteLine("playercurX " + playercurrentX);
-            Console.WriteLine("playercurY " + playercurrentY);
-            Console.WriteLine("move " + s);
-            connect(s);
         }
 
         public void connect(String s)
@@ -324,7 +319,6 @@ namespace WindowsGame3
         public void accept(String msg)
         {
 
-
             int number = this.serverReply(msg);
 
             if (number != 0)
@@ -355,6 +349,7 @@ namespace WindowsGame3
                         {
                             int[] ints = brickWalls[i].Split(',').Select(int.Parse).ToArray();
                             initialLocations[ints[1], ints[0]] = 2;
+                            AImap[ints[0], ints[1]] = false;
                             Console.WriteLine(brickWalls[i] + "\t");
                         }
 
@@ -363,6 +358,7 @@ namespace WindowsGame3
                         {
                             int[] ints = obstacles[i].Split(',').Select(int.Parse).ToArray();
                             initialLocations[ints[1], ints[0]] = 3;
+                            AImap[ints[0], ints[1]] = false;
                             Console.WriteLine(obstacles[i] + "\t");
                         }
 
@@ -371,66 +367,170 @@ namespace WindowsGame3
                         {
                             int[] ints = water[i].Split(',').Select(int.Parse).ToArray();
                             initialLocations[ints[1], ints[0]] = 1;
+                            AImap[ints[0], ints[1]] = false;
                             Console.WriteLine(water[i] + "\t");
                         }
 
                         map.Genarate(initialLocations, 50);
-
-
-
 
                     }
                     else if (msg.StartsWith("S"))
                     {
                         char[] CharArray2 = { ';' };
                         string[] playerDetails = tokens[1].Split(CharArray2);
-                        contestant.playerName = playerDetails[0];
-                        Console.WriteLine("\nNew player :" + contestant.playerName);
-                        contestant.playerLocationX = int.Parse(playerDetails[1].Substring(0, 1));
-                        contestant.playerLocationY = int.Parse(playerDetails[1].Substring(2, 1));
-                        contestant.Direction = int.Parse(playerDetails[2]);
+                        contestant[0] = new Contestant();
+                        contestant[0].playerName = playerDetails[0];
+                        Console.WriteLine("\nNew player :" + contestant[0].playerName);
+                        contestant[0].playerLocationX = int.Parse(playerDetails[1].Substring(0, 1));
+                        contestant[0].playerLocationY = int.Parse(playerDetails[1].Substring(2, 1));
+                        contestant[0].Direction = int.Parse(playerDetails[2]);
 
-                        playerpos.X = (contestant.playerLocationX + 2) * 50;
-                        playerpos.Y = (contestant.playerLocationY + 2) * 50;
-                        playercurrentdir = contestant.Direction;
+                        playerpos.X = (contestant[0].playerLocationX + 2) * 50;
+                        playerpos.Y = (contestant[0].playerLocationY + 2) * 50;
+                        playercurrentdir = contestant[0].Direction;
 
-                        map.UpdatePlayer(contestant.playerLocationX + 1, contestant.playerLocationY + 1, 50, contestant.Direction, false);
-                        Console.WriteLine(contestant.ToString());
+                        //map.UpdatePlayer(contestant[0].playerLocationX + 1, contestant[0].playerLocationY + 1, 50, contestant[0].Direction, false,0);
+                        Console.WriteLine(contestant[0].ToString());
                     }
                     else if (msg.StartsWith("G"))
                     {
-                        char[] CharArray2 = { ';' };
-                        string[] playerDetails = tokens[1].Split(CharArray2);
-                        contestant.playerName = playerDetails[0];
-                        Console.WriteLine("\nCurrent deatails of " + contestant.playerName);
-                        contestant.playerLocationX = int.Parse(playerDetails[1].Substring(0, 1));
-                        contestant.playerLocationY = int.Parse(playerDetails[1].Substring(2, 1));
-                        contestant.Direction = int.Parse(playerDetails[2]);
-                        playercurrentHealth = int.Parse(playerDetails[4]);
-                        playercurrentCoins = int.Parse(playerDetails[5]);
-                        playercurrentPoints = int.Parse(playerDetails[6]);
+                        map.removePlayerTiles(tokens.Length - 2);
+                        for (int i = 0; i < tokens.Length-2; i++)
+                        {
+                            if (tokens[i+1] != null)
+                            {
+                                char[] CharArray2 = { ';' };
+                                string[] playerDetails = tokens[i+1].Split(CharArray2);
+                                contestant[i] = new Contestant();
+                                contestant[i].playerName = playerDetails[0];
+                                Console.WriteLine("\nCurrent deatails of " + contestant[i].playerName);
+                                contestant[i].playerLocationX = int.Parse(playerDetails[1].Substring(0, 1));
+                                contestant[i].playerLocationY = int.Parse(playerDetails[1].Substring(2, 1));
+                                contestant[i].Direction = int.Parse(playerDetails[2]);
+                                contestant[i].Health = int.Parse(playerDetails[4]);
+                                contestant[i].Coins = int.Parse(playerDetails[5]);
+                                contestant[i].PointsEarned = int.Parse(playerDetails[6]);
 
-                        playerpos.X = (contestant.playerLocationX + 2) * 50;
-                        playerpos.Y = (contestant.playerLocationY + 2) * 50;
+                                playerpos.X = (contestant[i].playerLocationX + 2) * 50;
+                                playerpos.Y = (contestant[i].playerLocationY + 2) * 50;
 
-                        playercurrentX = contestant.playerLocationX;
-                        playercurrentY = contestant.playerLocationY;
+                                playercurrentHealth = int.Parse(playerDetails[4]);
+                                playercurrentCoins = int.Parse(playerDetails[5]);
+                                playercurrentPoints = int.Parse(playerDetails[6]);
+                                playercurrentX = contestant[i].playerLocationX;
+                                playercurrentY = contestant[i].playerLocationY;
+                                Console.WriteLine(contestant[i].ToString());
+                                map.UpdatePlayer(contestant[i].playerLocationX + 1, contestant[i].playerLocationY + 1, 50, contestant[i].Direction, true,i);
+                            }                            
+                        }
+                        
+                        bool iscoin = true;
+                        int minPathCount = 100;
+                        var startLocation = new Point(contestant[0].playerLocationX, contestant[0].playerLocationY);
+                        var endLocation = new Point(0, 0);
+                        List<Point> path = new List<Point>();
+                        
+                        PathFinder pathFinder;
 
-                        string tm = tankmove(contestant.playerLocationX, contestant.playerLocationY);
+                        if (coinpilelist.Count != 0)
+                        {
+                            CoinPile minC = coinpilelist[0];
+                            foreach (CoinPile c in coinpilelist)
+                            {
+                                endLocation = new Point(c.CoinPileLocationX, c.CoinPileLocationY);
+                                this.searchParameters = new SearchParameters(startLocation, endLocation, AImap);
+
+                                pathFinder = new PathFinder(searchParameters);
+                                path = pathFinder.FindPath();
+                                if (path.Count < minPathCount)
+                                {
+                                    minPathCount = path.Count;
+                                    minC = c;
+                                
+                                }
+                            }
+                            if (lifepacklist.Count != 0)
+                            {
+                                LifePack minL = lifepacklist[0];
+
+                                foreach (LifePack l in lifepacklist)
+                                {
+
+                                    endLocation = new Point(l.LifePackLocationX, l.LifePackLocationY);
+                                    this.searchParameters = new SearchParameters(startLocation, endLocation, AImap);
+
+                                    pathFinder = new PathFinder(searchParameters);
+                                    path = pathFinder.FindPath();
+                                    if (path.Count < minPathCount)
+                                    {
+                                        minPathCount = path.Count;
+                                        minL = l;
+                                        iscoin = false;
+                                    }
+                                }
+                                if (iscoin == true)
+                                {
+                                    endLocation = new Point(minC.CoinPileLocationX, minC.CoinPileLocationY);
+                                }
+                                else
+                                {
+                                    endLocation = new Point(minL.LifePackLocationX, minL.LifePackLocationY);
+                                }
+                            }
+                            
+                        }
+
+                        
+                        this.searchParameters = new SearchParameters(startLocation, endLocation, AImap);
+
+                        pathFinder = new PathFinder(searchParameters);
+                        path = pathFinder.FindPath();
+                        
+                        string tm = moveTankAI(path, contestant[0].playerLocationX, contestant[0].playerLocationY);
+                        if (tm != "invalid")
+                        {
+                            connect(tm);
+                            //Thread.Sleep(20);
+                            map.UpdatePlayer(contestant[0].playerLocationX + 1, contestant[0].playerLocationY + 1, 50, contestant[0].Direction, true,0);
+                        }
+
+
+                        for (int y = 0; y < 10; y++)
+                        {
+                            for (int x = 0; x < 10; x++)
+                            {
+                                if (this.searchParameters.StartLocation.Equals(new Point(x, y)))
+                                    Console.Write('S'); // Show the start position
+                                else if (this.searchParameters.EndLocation.Equals(new Point(x, y)))
+                                    Console.Write('F'); // Show the coinpile,lifepack position
+                                else if (this.AImap[x, y] == false)
+                                    Console.Write('o'); // Show any blocked tiles
+                                else if (path.Where(p => p.X == x && p.Y == y).Any())
+                                    Console.Write('*'); // Show the path 
+                                else
+                                    Console.Write('·'); // Show any blocked tiles
+                            }
+                            Console.WriteLine();
+                        }
+
+                        /*
+                        string tm = tankmove(contestant[i].playerLocationX, contestant[i].playerLocationY);
                         if (tm != "invalid")
                         {
                             connect(tm);
                             Thread.Sleep(20);
-                            map.UpdatePlayer(contestant.playerLocationX + 1, contestant.playerLocationY + 1, 50, contestant.Direction, true);
+                            map.UpdatePlayer(contestant[i].playerLocationX + 1, contestant[i].playerLocationY + 1, 50, contestant[i].Direction, true);
                         }
+                        /*
                         Thread.Sleep(200);
                         connect("SHOOT#");
+
                         Thread.Sleep(20);
 
-                        map.UpdateRocket(contestant.playerLocationX + 1, contestant.playerLocationY + 1, 50);
-                       
+                        map.UpdateRocket(contestant[i].playerLocationX + 1, contestant[i].playerLocationY + 1, 50);
 
-                        Console.WriteLine(contestant.ToString());
+                    */
+
                     }
                     else if (msg.StartsWith("C"))
                     {
@@ -440,9 +540,9 @@ namespace WindowsGame3
                         coinpile.lifetime = int.Parse(tokens[2]);
                         coinpile.price = int.Parse(tokens[3]);
 
-                        //coinpilelist.Add(coinpile);
+                        coinpilelist.Add(coinpile);
 
-                        map.UpdateCoins(coinpile.CoinPileLocationX + 1, coinpile.CoinPileLocationY + 1, 50, 0);
+                        map.UpdateCoins(coinpile.CoinPileLocationX + 1, coinpile.CoinPileLocationY + 1, 50, coinpile.lifetime);
                         Console.WriteLine(coinpile.ToString());
                     }
                     else if (msg.StartsWith("L"))
@@ -454,19 +554,17 @@ namespace WindowsGame3
 
                         lifepacklist.Add(lifepack);
 
-                        map.UpdateLifePack(lifepack.LifePackLocationX + 1, lifepack.LifePackLocationY + 1, 50, 0);
-                        Console.WriteLine(coinpile.ToString());
+                        map.UpdateLifePack(lifepack.LifePackLocationX + 1, lifepack.LifePackLocationY + 1, 50, lifepack.lifetime);
+                        Console.WriteLine(lifepack.ToString());
+                      
                     }
 
                 }
                 else
                 {
                     Console.WriteLine("Error in message received..");
-
-                }
+                }                
             }
-
-
         }
 
         public void drawLifepacks()
@@ -500,8 +598,6 @@ namespace WindowsGame3
         public void drawData()
         {
 
-            
-
             spriteBatch.Draw(whiteRectangle, new Rectangle(600, 150, 98, 28), Color.White);
             spriteBatch.Draw(whiteRectangle, new Rectangle(700, 150, 98, 28), Color.White);
             spriteBatch.Draw(whiteRectangle, new Rectangle(800, 150, 98, 28), Color.White);
@@ -515,19 +611,22 @@ namespace WindowsGame3
 
         public void updateData()
         {
-            for (int i=0; i < 1; i++)
+            for (int i=0; i < 5; i++)
             {
-                
+                if (contestant[i] != null)
+                {
+                    spriteBatch.Draw(whiteRectangle, new Rectangle(600, 180 + 30 * i, 98, 28), Color.White);
+                    spriteBatch.Draw(whiteRectangle, new Rectangle(700, 180 + 30 * i, 98, 28), Color.White);
+                    spriteBatch.Draw(whiteRectangle, new Rectangle(800, 180 + 30 * i, 98, 28), Color.White);
+                    spriteBatch.Draw(whiteRectangle, new Rectangle(900, 180 + 30 * i, 98, 28), Color.White);
 
-                spriteBatch.Draw(whiteRectangle, new Rectangle(600, 180+30*i, 98, 28), Color.White);
-                spriteBatch.Draw(whiteRectangle, new Rectangle(700, 180 + 30 * i, 98, 28), Color.White);
-                spriteBatch.Draw(whiteRectangle, new Rectangle(800, 180 + 30 * i, 98, 28), Color.White);
-                spriteBatch.Draw(whiteRectangle, new Rectangle(900, 180 + 30 * i, 98, 28), Color.White);
+                    spriteBatch.DrawString(font, "P" + i, new Vector2(600, 180 + 30 * i), Color.Black);
+                    spriteBatch.DrawString(font, contestant[i].PointsEarned.ToString(), new Vector2(700, 180 + 30 * i), Color.Black);
+                    spriteBatch.DrawString(font, contestant[i].Coins.ToString(), new Vector2(800, 180 + 30 * i), Color.Black);
+                    spriteBatch.DrawString(font, contestant[i].Health.ToString(), new Vector2(900, 180 + 30 * i), Color.Black);
 
-                spriteBatch.DrawString(font, "P"+i, new Vector2(600, 180 + 30 * i), Color.Black);
-                spriteBatch.DrawString(font, playercurrentPoints.ToString(), new Vector2(700, 180 + 30 * i), Color.Black);
-                spriteBatch.DrawString(font, playercurrentCoins.ToString(), new Vector2(800, 180 + 30 * i), Color.Black);
-                spriteBatch.DrawString(font, playercurrentHealth.ToString(), new Vector2(900, 180 + 30 * i), Color.Black);
+                }
+
             }
 
         }
@@ -565,117 +664,29 @@ namespace WindowsGame3
             }
 
         }
-
-        public String move()
-        {
-            if (ValidCoordinates(playercurrentX + 1, playercurrentY))
-            {
-                playerpos.X = (playercurrentX + 1 + 2) * 50;
-                playerpos.Y = (playercurrentY + 2) * 50;
-                return "DOWN#";
-            }
-            if (ValidCoordinates(playercurrentX, playercurrentY + 1))
-            {
-                playerpos.X = (playercurrentX + 2) * 50;
-                playerpos.Y = (playercurrentY + 1 + 2) * 50;
-                return "RIGHT#";
-            }
-            if (ValidCoordinates(playercurrentX - 1, playercurrentY))
-            {
-                playerpos.X = (playercurrentX - 1 + 2) * 50;
-                playerpos.Y = (playercurrentY + 2) * 50;
-                return "UP#";
-            }
-            if (ValidCoordinates(playercurrentX, playercurrentY - 1))
-            {
-                playerpos.X = (playercurrentX + 2) * 50;
-                playerpos.Y = (playercurrentY - 1 + 2) * 50;
-                return "LEFT#";
-            }
-            return "";
-        }
-
-        public String tankmove(int x, int y)
+        
+        public String moveTankAI(List<Point> path,int x, int y)
         {
 
             string command = "invalid";
-            if (ValidCoordinates(x, y + 1))
+            if (path.Where(p => p.X == x && p.Y == y+1).Any())
             {
                 command = "DOWN#";
             }
-            else if (ValidCoordinates(x + 1, y))
+            else if (path.Where(p => p.X == x+1 && p.Y == y).Any())
             {
                 command = "RIGHT#";
             }
-            else if (ValidCoordinates(x, y - 1))
+            else if (path.Where(p => p.X == x && p.Y == y - 1).Any())
             {
                 command = "UP#";
             }
-            else if (ValidCoordinates(x - 1, y))
+            else if (path.Where(p => p.X == x-1 && p.Y == y ).Any())
             {
                 command = "LEFT#";
             }
             return command;
         }
-        /*
-        public Dictionary<int,int> shortest_path(int startx, int starty, int finishx, int finishy)
-        {
-            var previous = new Dictionary<int, int>();
-            //var distances = new Dictionary<char, int>();
-            var nodes = new List<char>();
-
-            Dictionary<int,int> path = null;
-
-            foreach (var vertex in vertices)
-            {
-                if (vertex.Key == start)
-                {
-                    distances[vertex.Key] = 0;
-                }
-                else
-                {
-                    distances[vertex.Key] = int.MaxValue;
-                }
-
-                nodes.Add(vertex.Key);
-            }
-
-            while (nodes.Count != 0)
-            {
-                nodes.Sort((x, y) => distances[x] - distances[y]);
-
-                var smallest = nodes[0];
-                nodes.Remove(smallest);
-
-                if (smallest == finish)
-                {
-                    path = new Dictionary<int, int>();
-                    while (previous.ContainsKey(smallest))
-                    {
-                        path.Add(smallest);
-                        smallest = previous[smallest];
-                    }
-
-                    break;
-                }
-
-                if (distances[smallest] == int.MaxValue)
-                {
-                    break;
-                }
-
-                foreach (var neighbor in vertices[smallest])
-                {
-                    var alt = distances[smallest] + neighbor.Value;
-                    if (alt < distances[neighbor.Key])
-                    {
-                        distances[neighbor.Key] = alt;
-                        previous[neighbor.Key] = smallest;
-                    }
-                }
-            }
-
-            return path;
-        }*/
+        
     }
 }
